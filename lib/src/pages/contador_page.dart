@@ -28,19 +28,21 @@ class _ContadorPageState extends State<ContadorPage> {
         ),
         //Cambiar ubicacion
         //floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
-          onPressed: (){
-            print('Hola Mundo');
-            _conteo = _conteo + 1;
-
-
-            //Redibuja todo el widget
-            setState(() {
-              
-            });
-          },
-        ),
+        floatingActionButton: _crearBotones()
     );
+  }
+  Widget _crearBotones(){
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: <Widget>[
+            SizedBox(width: 30.0,),
+            FloatingActionButton(child: Icon(Icons.exposure_zero), onPressed: null),
+            Expanded(child: SizedBox(width: 5.0,)),
+            FloatingActionButton(child: Icon(Icons.remove), onPressed: null),
+            SizedBox(width: 5.0,),
+            FloatingActionButton(child: Icon(Icons.add), onPressed: null),
+      ],
+      );
+    
   }
 }
