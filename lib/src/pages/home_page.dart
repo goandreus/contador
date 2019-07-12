@@ -20,6 +20,7 @@ class HomePage extends StatelessWidget {
            Text('0',style: estiloTexto)
         ],)
         ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
           onPressed: (){
