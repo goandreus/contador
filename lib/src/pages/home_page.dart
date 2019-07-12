@@ -4,6 +4,7 @@ class HomePage extends StatelessWidget {
   //const HomePage({Key key}) : super(key: key);
 
   final estiloTexto = TextStyle(fontSize: 25);
+  final conteo = 10;
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +18,11 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
            Text('Hola mundo', style: estiloTexto),
-           Text('0',style: estiloTexto)
+           Text('$conteo',style: estiloTexto)
         ],)
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        //Cambiar ubicacion
+        //floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
           onPressed: (){
